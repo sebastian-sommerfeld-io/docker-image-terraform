@@ -1,0 +1,8 @@
+---
+name: docker-images-terraform
+title: Docker Image terraform
+version: main
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc
+  - modules/AUTO-GENERATED/nav.adoc
