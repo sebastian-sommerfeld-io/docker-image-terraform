@@ -114,12 +114,7 @@ jobs:
       - name: Run container and print versions of installed packages
         run: |
           # docker pull sommerfeldio/terraform:${{ steps.vars.outputs.DOCKER_TAG }}
-
-          docker run -i sommerfeldio/terraform:${{ steps.vars.outputs.DOCKER_TAG }} npm list -g --depth=0
-
-          docker run -i sommerfeldio/terraform:${{ steps.vars.outputs.DOCKER_TAG }} antora --version
-          docker run -i sommerfeldio/terraform:${{ steps.vars.outputs.DOCKER_TAG }} asciidoctor --version
-          docker run -i sommerfeldio/terraform:${{ steps.vars.outputs.DOCKER_TAG }} gulp --version
+          docker run -i sommerfeldio/terraform:${{ steps.vars.outputs.DOCKER_TAG }} -version
 
       - name: Run Snyk to check Docker image for vulnerabilities
         continue-on-error: true
