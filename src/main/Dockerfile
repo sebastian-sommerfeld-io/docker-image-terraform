@@ -3,7 +3,7 @@ LABEL maintainer="sebastian@sommerfeld.io"
 
 # Install basics
 RUN apk update \
-    && apk --no-cache add curl=7.86.0-r1 \
+    && apk --no-cache add curl=7.87.0-r0 \
     && apk --no-cache add unzip=6.0-r13
 
 # Install Bitwarden CLI + dependencies
