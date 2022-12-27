@@ -17,7 +17,7 @@
 // |                                          |
 // +------------------------------------------+
 
-Docker image for link:https://www.terraform.io[`terraform`]. The image contains other software which is needed by other Terraform provideres as well.
+Docker image to use link:https://www.terraform.io[`terraform`] from a container. The image contains other software which is needed by other Terraform provideres as well.
 
 image:{github-actions-url}/{job-generate-docs}/{badge}[Github Badge, link={github-actions-url}/{job-generate-docs}]
 image:{github-actions-url}/{job-ci}/{badge}[Github Badge, link={github-actions-url}/{job-ci}]
