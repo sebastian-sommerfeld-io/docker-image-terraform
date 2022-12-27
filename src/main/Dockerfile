@@ -4,6 +4,7 @@ LABEL maintainer="sebastian@sommerfeld.io"
 # Install basics
 RUN apk update \
     && apk --no-cache add curl=7.87.0-r0 \
+    && apk --no-cache add libcurl=7.87.0-r0 \
     && apk --no-cache add unzip=6.0-r13
 
 # Install Bitwarden CLI + dependencies
@@ -13,7 +14,7 @@ RUN apk --no-cache add libc6-compat=1.2.3-r4 \
     && apk --no-cache add libgcc=12.2.1_git20220924-r4 \
     && apk --no-cache add libstdc++=12.2.1_git20220924-r4 \
     && rm -rf /var/cache/apk/* \
-    && curl -sL https://github.com/bitwarden/clients/releases/download/cli-v${BW_VERSION}/bw-linux-${BW_VERSION}.zip -o bw.zip \
+    && curl -L https://github.com/bitwarden/clients/releases/download/cli-v${BW_VERSION}/bw-linux-${BW_VERSION}.zip -o bw.zip \
     && unzip bw.zip \
     && chmod +rx bw \
     && rm bw.zip \
