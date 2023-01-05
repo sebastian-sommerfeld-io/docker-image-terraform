@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:1.3.6
+FROM hashicorp/terraform:1.3.7
 LABEL maintainer="sebastian@sommerfeld.io"
 
 # Install basics
