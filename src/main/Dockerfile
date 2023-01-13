@@ -2,9 +2,10 @@ FROM hashicorp/terraform:1.3.7
 LABEL maintainer="sebastian@sommerfeld.io"
 
 # Install basics
+ARG CURL_VERSION="7.87.0-r1"
 RUN apk update \
-    && apk --no-cache add curl=7.87.0-r0 \
-    && apk --no-cache add libcurl=7.87.0-r0 \
+    && apk --no-cache add curl=${CURL_VERSION} \
+    && apk --no-cache add libcurl=${CURL_VERSION} \
     && apk --no-cache add unzip=6.0-r13
 
 # Install Bitwarden CLI + dependencies
