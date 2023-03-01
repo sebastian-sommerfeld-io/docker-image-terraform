@@ -2,7 +2,7 @@ FROM hashicorp/terraform:1.3.9
 LABEL maintainer="sebastian@sommerfeld.io"
 
 # Install basics
-ARG CURL_VERSION="7.87.0-r2"
+ARG CURL_VERSION="7.88.1-r0"
 RUN apk update \
     && apk --no-cache add curl=${CURL_VERSION} \
     && apk --no-cache add libcurl=${CURL_VERSION} \
